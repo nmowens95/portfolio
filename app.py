@@ -1,13 +1,12 @@
-from flask import Flask
+from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/')
-def hello():
-    return "Hello world, im heree"
+def home():
+    return render_template('index.html')
 
-@app.route('/user/<name>')
-def user(name):
-    personal = f'<h1>Hello, {name}!</h1>'
+
+
 
 
 if __name__ == '__main__':
